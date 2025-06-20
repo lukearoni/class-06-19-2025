@@ -4,3 +4,6 @@ format: html
 author: Luke Li
 ---
 
+```{r}
+library(tidyverse)
+```
