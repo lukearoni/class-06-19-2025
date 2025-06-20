@@ -29,6 +29,18 @@ connectedness |>
   caption = "Opportunity Insights")
 ```
 
+Plot 1: US County Population Distribution (2018)
+This histogram visualizes the distribution of county populations in the United States for the year 2018. It uses:
+
+100 bins to show detailed variation.
+
+A logarithmic x-axis (scale_x_log10) to handle the extreme right skew in population sizes (i.e., a small number of counties have very large populations).
+
+Black-filled bars with white borders for high contrast.
+
+Interpretation:
+The plot reveals that most U.S. counties have relatively small populations, while a few are extremely populous. The log scale makes the skewness more interpretable by compressing the wide range of values.
+
 ## GRAPH 2
 
 ```{r}
@@ -41,3 +53,17 @@ connectedness |>
     scale_x_log10(label = scales::comma) +
     labs(title = "US County Populations verses Economic Connectedness 2018", subtitle = "Population size does not matter to EC", caption = "Opportunity Insights", x = "Population", y = "Economic Connectedness")
 ```
+
+Plot 2: US County Population vs. Economic Connectedness (2018)
+This scatterplot shows the relationship between county population size and economic connectedness (EC).
+
+Each point represents a county.
+
+The x-axis is log-scaled to account for the wide range of population sizes.
+
+Points are styled in black with partial transparency (alpha = 0.3) to reduce overplotting.
+
+A linear trendline is added in red (geom_smooth(method = "lm")) without the confidence interval shading (se = FALSE).
+
+Interpretation:
+The plot suggests that there is little to no strong linear relationship between a county’s population and its level of economic connectedness. The red trendline appears relatively flat, supporting the subtitle’s claim that population size does not matter to EC.
